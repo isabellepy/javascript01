@@ -1,0 +1,30 @@
+/*jshint esversion: 6 */
+
+/**
+ * Determinator module.
+ *
+ * @module src/determinator
+ * @author John Häggerud
+ * @author Mast Loock
+ * @version 1.1.0
+ */
+
+'use strict'
+
+/**
+ * Returns a string indicating the type of the data sent to the function.
+ *
+ * @param {*} data The data whose type is to be returned.
+ * @returns {string} The data type of the parameter.
+ */
+function tellType (data) {
+  let result = 'You sent me ';
+
+  let dataType = typeof data;
+
+  result += dataType;
+
+  return result;
+}
+
+exports.tellType = tellType;
