@@ -19,6 +19,9 @@
  * @returns {string[]}
  */
 function filterBetterThanAverage(students) {
+  if(!Array.isArray(students)){
+    throw new TypeError("Argument must be an array");
+  }
   let average = students.reduce(function(sum, people){
     return sum + people.points;
   }, 0) / students.length;
